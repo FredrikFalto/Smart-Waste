@@ -1,11 +1,11 @@
 import React from 'react';
 
+import Home from './pages/home/home';
+
 function App() {
     return (
         <div className="App">
-            <h1 className="text-3xl font-bold underline text-center text-green-700">
-                Smart Waste
-            </h1>
+            <Home />
         </div>
     );
 }
