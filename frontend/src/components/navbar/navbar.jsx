@@ -1,8 +1,10 @@
 import React from 'react';
 
+import logo from "../../img/Logo.svg"
+
 const Navbar = () => {
     return (
-        <img src="../../img/Skärmavbild 2022-09-29 kl. 08.47.31.png" alt="" />
+        <img src={logo} alt="Logo" />
     );
 };
 
