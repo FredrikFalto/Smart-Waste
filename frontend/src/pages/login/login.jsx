@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Logo from "../../img/Logo.svg";
+import Logo from '../../img/Logo.svg';
 
 const LogIn = () => {
     return (
@@ -31,7 +31,7 @@ const LogIn = () => {
                                 autoComplete="email"
                                 required
                                 className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-green-600 sm:text-sm"
-                                placeholder="Email address"
+                                placeholder="Email"
                             />
                         </div>
                         <div>
@@ -45,7 +45,7 @@ const LogIn = () => {
                                 autoComplete="current-password"
                                 required
                                 className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                placeholder="Password"
+                                placeholder="Lösenord"
                             />
                         </div>
                     </div>
@@ -62,7 +62,7 @@ const LogIn = () => {
                                 htmlFor="remember-me"
                                 className="ml-2 block text-sm text-gray-900"
                             >
-                                Remember me
+                                Kom ihåg mig
                             </label>
                         </div>
 
@@ -71,7 +71,7 @@ const LogIn = () => {
                                 href="/"
                                 className="font-medium text-indigo-600 hover:text-indigo-500"
                             >
-                                Forgot your password?
+                                Glömt lösenord?
                             </a>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ const LogIn = () => {
                         <Link to="/home">
                             <button
                                 type="submit"
-                                className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                className="group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white"
                             >
                                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                                     <path
@@ -89,7 +89,7 @@ const LogIn = () => {
                                         clipRule="evenodd"
                                     />
                                 </span>
-                                Sign in
+                                Logga in
                             </button>
                         </Link>
                     </div>
