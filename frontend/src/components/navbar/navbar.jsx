@@ -12,22 +12,16 @@ const Navbar = () => {
     return (
         <nav className="bg-white border border-gray-300 px-2 w-full fixed bottom-0 md:top-0">
             <ul className="flex flex-row mb-1 mt-2 justify-center">
-                <li>
-                    <a href="/home" className="mr-2 flex flex-col">
+                <li className="mr-10">
+                    <a href="/home" className="flex flex-col">
                         <img src={MagnifierIcon} alt="" id="navIcon" />
                         Annonser
                     </a>
                 </li>
-                <li>
-                    <a href="/home" className="mr-2 flex flex-col">
+                <li className="mr-10">
+                    <a href="/home" className="flex flex-col">
                         <img src={PlusIcon} alt="" id="navIcon" />
                         Ny annons
-                    </a>
-                </li>
-                <li>
-                    <a href="/home" className="mr-2 flex flex-col">
-                        <img src={MessagesIcon} alt="" id="navIcon" />
-                        Meddelanden
                     </a>
                 </li>
                 <li>
