@@ -3,7 +3,7 @@ import React from 'react';
 import './navbar.css';
 
 // import logo from '../../img/Logo.svg';
-import ProductIcon from '../../img/ProdukterIcon.svg';
+import MagnifierIcon from '../../img/MagnifierIcon.svg';
 import PlusIcon from '../../img/PlusIcon.svg';
 import MessagesIcon from '../../img/MessagesIcon.svg';
 import ProfileIcon from '../../img/ProfileIcon.svg';
@@ -14,7 +14,7 @@ const Navbar = () => {
             <ul className="flex flex-row my-1 justify-center">
                 <li>
                     <a href="/home" className="m-1 flex flex-col">
-                        <img src={ProductIcon} alt="" id="navIcon" />
+                        <img src={MagnifierIcon} alt="" id="navIcon" />
                         Annonser
                     </a>
                 </li>
