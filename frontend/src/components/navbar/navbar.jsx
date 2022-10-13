@@ -5,7 +5,6 @@ import './navbar.css';
 // import logo from '../../img/Logo.svg';
 import MagnifierIcon from '../../img/MagnifierIcon.svg';
 import PlusIcon from '../../img/PlusIcon.svg';
-import MessagesIcon from '../../img/MessagesIcon.svg';
 import ProfileIcon from '../../img/ProfileIcon.svg';
 
 const Navbar = () => {
