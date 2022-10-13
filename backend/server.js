@@ -1,9 +1,13 @@
 require('dotenv').config();
 
 const express = require('express');
+const recipeRoutes = require('./routes/recipes');
 
 //express app
 const app = express();
+
+// middleware
+app.use(express.json());
 
 app.use((req, res, next) => {
     console.log(req.path, req.method);
@@ -11,9 +15,7 @@ app.use((req, res, next) => {
 });
 
 //routes
-app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to Smart Waste!' });
-});
+app.use('/api/recipes', recipeRoutes);
 
 //Lyssna efter requests
 app.listen(process.env.PORT, () => {
