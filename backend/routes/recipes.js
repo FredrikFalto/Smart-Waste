@@ -7,13 +7,13 @@ const {
 
 const router = express.Router();
 
-// Hämta alla recept
+// Get all recipes
 router.get('/', getRecipes);
 
-// Hämta ett recept
+// Get a recipe
 router.get('/:id', getRecipe);
 
-// Lägga till ett recept
+// Add a new recipe
 router.post('/', createRecipe);
 
 module.exports = router;
