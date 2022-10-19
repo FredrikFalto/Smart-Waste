@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const recipeRoutes = require('./routes/recipes');
 const userRoutes = require('./routes/users');
+const listingRoutes = require('./routes/listings');
 
 //express app
 const app = express();
@@ -18,9 +19,8 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/api/users', userRoutes);
-
 app.use('/api/recipes', recipeRoutes);
-
+app.use('/api/listings', listingRoutes);
 
 // Connect to db
 mongoose
