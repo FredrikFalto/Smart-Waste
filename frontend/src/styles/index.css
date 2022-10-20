@@ -6,8 +6,10 @@
     .card {
         background-color: theme('colors.white');
         border-radius: theme('borderRadius.lg');
-        padding: theme('spacing.6');
+        padding: theme('spacing.10');
         box-shadow: theme('boxShadow.xl');
+        border: solid black 1px;
+        height: 100%;
     }
 }
 
