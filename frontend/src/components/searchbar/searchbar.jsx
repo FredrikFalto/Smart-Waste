@@ -22,7 +22,7 @@ const Searchbar = () => {
                     </div>
 
                     <input
-                        className="border-2 border-gray-300 bg-white block pl-10 pr-3 h-10 w-full rounded-lg text-sm focus:outline-stone-600"
+                        className="border-2 border-gray-300 bg-white block  h-10 pl-10 pr-3 w-full rounded-lg text-sm focus:outline-stone-600"
                         type="search"
                         name="search"
                         placeholder="Sök..."
