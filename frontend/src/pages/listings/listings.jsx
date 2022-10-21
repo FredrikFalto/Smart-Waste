@@ -20,8 +20,8 @@ const Listings = () => {
             <h3 className="ml-2 text-lg">Vad är du sugen på?</h3>
 
             <div className="flex flex-row overflow-x-auto mx-1 gap-1">
-                <a href="" className="card" p-0>
-                    <img src={Meat} alt="Kött" className="card p-0" />
+                <a href="">
+                    <img src={Meat} alt="Kött" className="card card-item p-0" />
                 </a>
                 <a href="">
                     <img
