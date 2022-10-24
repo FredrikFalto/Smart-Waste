@@ -44,7 +44,7 @@ const Listings = () => {
 
             <h3 className="ml-2 text-xl pt-6">Trött på det gamla vanliga?</h3>
 
-            <div className="grid grid-cols-2 gap-1 mx-1 overflow-auto">
+            <div className="grid grid-cols-2 gap-1 mx-1 overflow-auto pb-2">
                 {items}
             </div>
         </div>
