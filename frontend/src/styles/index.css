@@ -8,11 +8,9 @@
         border-radius: theme('borderRadius.lg');
         padding: theme('spacing.10');
         box-shadow: theme('boxShadow.md');
-        border: solid black 1px;
-        height: 100%;
+        /* border: solid black 1px; */
     }
 }
-
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
