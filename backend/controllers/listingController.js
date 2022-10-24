@@ -33,9 +33,11 @@ const createListing = async (req, res) => {
         allergens,
         category,
         extrainfo,
+        portions,
         price,
         expirationdate,
         link,
+        imglink,
     } = req.body;
 
     try {
@@ -45,9 +47,11 @@ const createListing = async (req, res) => {
             allergens,
             category,
             extrainfo,
+            portions,
             price,
             expirationdate,
             link,
+            imglink,
         });
         res.status(200).json(listing);
     } catch (error) {

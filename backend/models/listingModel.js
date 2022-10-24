@@ -19,12 +19,12 @@ const listingSchema = new Schema({
         type: String,
         required: true,
     },
-    category: {
+    extrainfo: {
         type: String,
         required: true,
     },
-    extrainfo: {
-        type: String,
+    portions: {
+        type: Number,
         required: true,
     },
     price: {
@@ -36,6 +36,10 @@ const listingSchema = new Schema({
         required: true,
     },
     link: {
+        type: String,
+        required: true,
+    },
+    imglink: {
         type: String,
         required: true,
     },
