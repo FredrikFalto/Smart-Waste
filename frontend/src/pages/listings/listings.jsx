@@ -50,6 +50,17 @@ const Listings = () => {
             <Navbar />
             <hr className="my-1 h-px bg-gray-200 border-0 shadow" />
 
+            <div className="flex justify-center">
+                <h3 className=" justify-self-center">Filter</h3>
+
+                <select id="cars" name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+
             <h3 className="ml-2 text-lg">Vad är du sugen på?</h3>
             <Categorybar />
 
