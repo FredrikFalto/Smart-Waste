@@ -5,33 +5,44 @@ import Navbar from '../../components/navbar/navbar';
 import Searchbar from '../../components/searchbar/searchbar';
 import Categorybar from '../../components/categorybar/categorybar';
 
-const url = 'http://localhost:4000/api';
+const url = 'http://localhost:4000/api/';
 
 const Listings = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get(url + '/listings').then((res) => {
-            const listings = res.data.map((item) => {
-                return (
-                    <div key={item._id} className="card p-1 basis-1/2">
-                        <a href="">
-                            <img
-                                src={item.imglink}
-                                alt={item.dish}
-                                className="rounded"
-                            />
-                            <hr className="my-1 h-px bg-gray-200 border-0 shadow" />
-                            <h3>{item.dish}</h3>
-                            <p className="text-sm">{item.portions} portioner</p>
-                            <p className="text-sm">{item.price}kr</p>
-                        </a>
-                    </div>
-                );
+        axios
+            .get(url + 'listings')
+            .then((res) => {
+                const listings = res.data.map((item) => {
+                    return (
+                        <div key={item._id} className="card p-1 basis-1/2">
+                            <a href={`http://localhost:3000/${item._id}`}>
+                                <img
+                                    src={item.imglink}
+                                    alt={item.dish}
+                                    className="rounded"
+                                />
+                                <hr className="my-1 h-px bg-gray-200 border-0 shadow" />
+                                <h3>{item.dish}</h3>
+                                <div className="grid grid-cols-2">
+                                    <p className="text-sm">
+                                        {item.portions} portioner
+                                    </p>
+                                    <p className="text-sm justify-self-end">
+                                        {item.price}kr
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    );
+                });
+                setItems(listings);
+            })
+            .catch((err) => {
+                console.log(err);
             });
-            setItems(listings);
-        });
-    });
+    }, []);
 
     return (
         <div>
