@@ -17,7 +17,9 @@ const Listings = () => {
                 const listings = res.data.map((item) => {
                     return (
                         <div key={item._id} className="card p-1 basis-1/2">
-                            <a href={`http://localhost:3000/${item._id}`}>
+                            <a
+                                href={`http://localhost:3000/listings/${item._id}`}
+                            >
                                 <img
                                     src={item.imglink}
                                     alt={item.dish}
@@ -47,27 +49,19 @@ const Listings = () => {
     return (
         <div>
             <Searchbar />
-            <Navbar />
             <hr className="my-1 h-px bg-gray-200 border-0 shadow" />
 
-            <div className="flex justify-center">
-                <h3 className=" justify-self-center">Filter</h3>
+            <Navbar />
 
-                <select id="cars" name="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="fiat">Fiat</option>
-                    <option value="audi">Audi</option>
-                </select>
-            </div>
+            <div className="container mx-auto">
+                <h3 className="ml-2 text-lg">Vad är du sugen på?</h3>
+                <Categorybar />
 
-            <h3 className="ml-2 text-lg">Vad är du sugen på?</h3>
-            <Categorybar />
+                <h3 className="ml-2 text-xl">Trött på det gamla vanliga?</h3>
 
-            <h3 className="ml-2 text-xl pt-6">Trött på det gamla vanliga?</h3>
-
-            <div className="grid grid-cols-2 gap-1 mx-1 overflow-auto pb-2">
-                {items}
+                <div className="grid grid-cols-2 gap-1 mx-1 overflow-auto pb-20">
+                    {items}
+                </div>
             </div>
         </div>
     );
