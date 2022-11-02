@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Logo from '../../img/Logo.svg'
 
-const LogIn = () => {
+const SignUp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -22,27 +22,28 @@ const LogIn = () => {
                         alt='Smart Waste logo'
                     />
                     <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'>
-                        Logga in
+                        Skapa konto
                     </h2>
                 </div>
                 <form className='mt-8 space-y-6' onSubmit={handleSubmit}>
-                    <div className='-5space-y-px rounded-md shadow-sm'>
+                    <div className='-space-y-px rounded-md shadow-sm'>
                         <div>
                             <input
+                                required
                                 type='email'
                                 onChange={(e) => setEmail(e.target.value)}
                                 value={email}
-                                required
                                 className='relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-green-600 sm:text-sm'
                                 placeholder='Email'
                             />
                         </div>
                         <div>
                             <input
+                                required
                                 type='password'
                                 onChange={(e) => setPassword(e.target.value)}
                                 value={password}
-                                required
+                                autoComplete='current-password'
                                 className='relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
                                 placeholder='Lösenord'
                             />
@@ -51,12 +52,15 @@ const LogIn = () => {
 
                     <div className='flex items-center justify-between'>
                         <div className='text-sm'>
-                            <a
-                                href='/signup'
-                                className='font-medium text-indigo-600 hover:text-indigo-500'
-                            >
-                                Skapa konto
-                            </a>
+                            <p>
+                                Redan medlem?{' '}
+                                <a
+                                    href='/'
+                                    className='font-medium text-indigo-600 hover:text-indigo-500'
+                                >
+                                    Logga in
+                                </a>
+                            </p>
                         </div>
 
                         <div className='text-sm'>
@@ -68,16 +72,19 @@ const LogIn = () => {
                             </a>
                         </div>
                     </div>
-                    <button
-                        type='submit'
-                        className='group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white'
-                    >
-                        Logga in
-                    </button>
+
+                    <div>
+                        <button
+                            type='submit'
+                            className='group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white'
+                        >
+                            Skapa konto
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
     )
 }
 
-export default LogIn
+export default SignUp
