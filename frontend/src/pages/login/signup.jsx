@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { useSignup } from '../../hooks/useSignup'
 
 import Logo from '../../img/Logo.svg'
 
 const SignUp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const { signup, error, isLoading } = useSignup()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(email, password)
+        await signup(email, password)
     }
 
     return (
@@ -76,12 +78,19 @@ const SignUp = () => {
 
                     <div>
                         <button
+                            disabled={isLoading}
                             type='submit'
                             className='group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white'
                         >
                             Skapa konto
                         </button>
                     </div>
+
+                    {error && (
+                        <div className='error text-center text-red-600 text-lg'>
+                            {error}
+                        </div>
+                    )}
                 </form>
             </div>
         </div>
