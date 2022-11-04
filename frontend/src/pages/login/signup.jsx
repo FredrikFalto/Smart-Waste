@@ -33,6 +33,7 @@ const SignUp = () => {
                                 type='email'
                                 onChange={(e) => setEmail(e.target.value)}
                                 value={email}
+                                autoComplete='username'
                                 className='relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-green-600 sm:text-sm'
                                 placeholder='Email'
                             />
