@@ -1,15 +1,17 @@
 import { useState } from 'react'
+import { useLogin } from '../../hooks/useLogin'
 
 import Logo from '../../img/Logo.svg'
 
 const LogIn = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const { login, error, isLoading } = useLogin()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(email, password)
+        await login(email, password)
     }
 
     return (
@@ -71,11 +73,18 @@ const LogIn = () => {
                         </div>
                     </div>
                     <button
+                        disabled={isLoading}
                         type='submit'
                         className='group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white'
                     >
                         Logga in
                     </button>
+
+                    {error && (
+                        <div className='error text-center text-red-600 text-lg'>
+                            {error}
+                        </div>
+                    )}
                 </form>
             </div>
         </div>
