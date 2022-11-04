@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import LogIn from './pages/login/login';
+import LogIn from './pages/login/login'
 import SignUp from './pages/login/signup'
 import Home from './pages/home/home'
 import Listings from './pages/listings/listings'
@@ -26,4 +26,4 @@ function App() {
     )
 }
 
-export default App;
+export default App

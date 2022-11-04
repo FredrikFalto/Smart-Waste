@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLogout } from '../../hooks/useLogout'
+import { useAuthContext } from '../../hooks/useAuthContext'
 
 import './navbar.css'
 
@@ -10,6 +11,7 @@ import ProfileIcon from '../../img/ProfileIcon.svg'
 
 const Navbar = () => {
     const { logout } = useLogout()
+    const { user } = useAuthContext()
 
     const handleClick = () => {
         logout()
@@ -37,13 +39,29 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <button
-                        className='bg-slate-400 rounded-md text-white ml-4 mt-1'
-                        id='logButton'
-                        onClick={handleClick}
-                    >
-                        Log out
-                    </button>
+                    {user && (
+                        <div>
+                            <span>{user.email}</span>
+                            <br />
+                            <button
+                                className='bg-slate-400 rounded-md text-white ml-4 mt-1'
+                                id='logButton'
+                                onClick={handleClick}
+                            >
+                                Log out
+                            </button>
+                        </div>
+                    )}
+                    {!user && (
+                        <div>
+                            <button
+                                className='bg-slate-400 rounded-md text-white ml-4 mt-1'
+                                id='logButton'
+                            >
+                                <a href='/'>Log in</a>
+                            </button>
+                        </div>
+                    )}
                 </li>
             </ul>
         </nav>
