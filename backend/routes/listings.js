@@ -1,19 +1,25 @@
-const express = require('express');
+const express = require('express')
 const {
     getListings,
     getListing,
     createListing,
-} = require('../controllers/listingController');
+} = require('../controllers/listingController')
 
-const router = express.Router();
+const requireAuth = require('../middleware/requireAuth')
+
+const router = express.Router()
+
+// Require auth for all listing routes
+// !! OBS !! Ta bort kommentaren nedanför efter implementation av lägga till annons sidan
+// router.use(requireAuth)
 
 // Get all recipes
-router.get('/', getListings);
+router.get('/', getListings)
 
 // Get a single listing
-router.get('/:id', getListing);
+router.get('/:id', getListing)
 
 // Add a new listing
-router.post('/', createListing);
+router.post('/', createListing)
 
-module.exports = router;
+module.exports = router

@@ -4,6 +4,7 @@ import { useAuthContext } from './useAuthContext'
 const url = 'http://localhost:4000'
 
 export const useLogin = () => {
+    // const navigate = useNavigate()
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(null)
     const { dispatch } = useAuthContext()
@@ -31,6 +32,8 @@ export const useLogin = () => {
             dispatch({ type: 'LOGIN', payload: json })
 
             setIsLoading(false)
+
+            window.location.replace(`/listings`)
         }
     }
 
