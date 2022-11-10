@@ -27,7 +27,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li className='mr-10'>
-                    <a href='/home' className='flex flex-col'>
+                    <a href='/newlisting' className='flex flex-col'>
                         <img src={PlusIcon} alt='Plus' id='navIcon' />
                         Ny annons
                     </a>
