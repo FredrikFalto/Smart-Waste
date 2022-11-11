@@ -1,8 +1,12 @@
 import React from 'react'
 
+import { format } from 'date-fns'
+
 import Navbar from '../../components/navbar/navbar'
 
 const newListing = () => {
+    const todaysDate = format(new Date(), 'yyyy-MM-dd')
+
     return (
         <div>
             <Navbar />
@@ -13,14 +17,14 @@ const newListing = () => {
                     <input
                         type='text'
                         id='dish'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <label htmlFor='ingredients'>
                         Ingredienser (en per rad)
                     </label>
                     <textarea
                         id='ingredients'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                         cols='30'
                         rows='6'
                     ></textarea>
@@ -28,19 +32,29 @@ const newListing = () => {
                     <input
                         type='text'
                         id='allergens'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <label htmlFor='category'>Select an option</label>
-                    <select id='category' className='border p-2 w-full'>
-                        <option selected>Välj en kategori</option>
+                    <select
+                        id='category'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
+                    >
+                        <option defaultValue='Välj en kategori'>
+                            Välj en kategori
+                        </option>
                         <option value='Kött'>Kött</option>
                         <option value='Vegetariskt'>Vegetariskt</option>
                         <option value='Fisk'>Fisk</option>
                         <option value='Kyckling'>Kyckling</option>
                     </select>
                     <label htmlFor='portions'>Select an option</label>
-                    <select id='portions' className='border p-2 w-full'>
-                        <option selected>Antal portioner</option>
+                    <select
+                        id='portions'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
+                    >
+                        <option defaultValue='Antal portioner'>
+                            Antal portioner
+                        </option>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -49,7 +63,7 @@ const newListing = () => {
                     <label htmlFor='extrainfo'>Extra info</label>
                     <textarea
                         id='extrainfo'
-                        className='border w-full px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                         cols='30'
                         rows='6'
                     ></textarea>
@@ -57,29 +71,26 @@ const newListing = () => {
                     <input
                         type='text'
                         id='link'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <label htmlFor='imglink'>Bildlänk</label>
                     <input
                         type='text'
                         id='imglink'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <label htmlFor='price'>Pris (kr)</label>
                     <input
                         type='text'
                         id='price'
-                        className='border w-full p-2 px-1'
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <label htmlFor='expirationdate'>Utgångsdatum</label>
                     <input
                         type='date'
-                        id='start'
-                        name='trip-start'
-                        value='2022-11-11'
-                        min='2022-11-11'
-                        max='2023-11-11'
-                        className='border w-full p-2 px-1'
+                        id='expirationdate'
+                        defaultValue={todaysDate}
+                        className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <button
                         type='submit'
