@@ -7,6 +7,7 @@ import Home from './pages/home/home'
 import Listings from './pages/listings/listings'
 import ListingDetail from './pages/listings/listingDetail'
 import NewListing from './pages/listings/newListing'
+import SuccessfulListing from './pages/listings/successfulListing'
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <Route path='/signup' element={<SignUp />}></Route>
                     <Route path='/home' element={<Home />}></Route>
                     <Route path='/newlisting' element={<NewListing />} />
+                    <Route path='/success' element={<SuccessfulListing />} />
                     <Route path='/listings' element={<Listings />} />
                     <Route
                         path='/listings/:listingId'
