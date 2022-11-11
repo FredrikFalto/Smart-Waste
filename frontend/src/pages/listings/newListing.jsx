@@ -73,9 +73,12 @@ const newListing = () => {
                     />
                     <label htmlFor='expirationdate'>Utgångsdatum</label>
                     <input
-                        datepicker
-                        type='text'
-                        id='expirationdate'
+                        type='date'
+                        id='start'
+                        name='trip-start'
+                        value='2022-11-11'
+                        min='2022-11-11'
+                        max='2023-11-11'
                         className='border w-full p-2 px-1'
                     />
                     <button
