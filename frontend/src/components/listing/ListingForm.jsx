@@ -160,7 +160,6 @@ const ListingForm = () => {
                 type='date'
                 id='expirationdate'
                 onChange={(e) => setExpirationdate(e.target.value)}
-                // value={expirationdate}
                 defaultValue={todaysDate}
                 min={todaysDate}
                 className='border border-slate-400 rounded w-full p-2 px-1'

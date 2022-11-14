@@ -1,7 +1,5 @@
 import { createContext, useReducer, useEffect } from 'react'
 
-import { format } from 'date-fns'
-
 export const AuthContext = createContext()
 
 export const authReducer = (state, action) => {
