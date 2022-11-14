@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema
 
 const listingSchema = new Schema({
     dish: {
@@ -13,7 +13,7 @@ const listingSchema = new Schema({
     },
     allergens: {
         type: Array,
-        required: true,
+        required: false,
     },
     category: {
         type: String,
@@ -43,6 +43,6 @@ const listingSchema = new Schema({
         type: String,
         required: true,
     },
-});
+})
 
-module.exports = mongoose.model('Listing', listingSchema);
+module.exports = mongoose.model('Listing', listingSchema)
