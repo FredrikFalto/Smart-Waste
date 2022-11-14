@@ -90,6 +90,7 @@ const newListing = () => {
                         type='date'
                         id='expirationdate'
                         defaultValue={todaysDate}
+                        min={todaysDate}
                         className='border border-slate-400 rounded w-full p-2 px-1'
                     />
                     <button
