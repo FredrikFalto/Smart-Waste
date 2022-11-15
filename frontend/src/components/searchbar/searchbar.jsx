@@ -1,6 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios"
+
+const url = "http://localhost:4000"
 
 const Searchbar = () => {
+    const [items, setItems] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchOutput, setSearchOutput] = useState([]);
+
+    useEffect(() => {
+        axios.get(url + '/api/listings')
+        .then((res) => {
+            setItems(res.data)
+        })
+        .catch((err)=> {
+            console.log(err);
+        })
+    }, [])
+
+    useEffect(() => {
+        setSearchOutput([]);
+        items.filter((value) => {
+            if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                setSearchOutput((searchOutput) => [...searchOutput, value]);
+            }
+        });
+    }, [searchTerm]);
+    
     return (
         <div>
             <div className="flex items-center justify-center pt-1">

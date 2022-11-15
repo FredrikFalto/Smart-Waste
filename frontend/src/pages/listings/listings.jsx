@@ -9,10 +9,8 @@ const url = 'http://localhost:4000/api/'
 
 const Listings = () => {
     const [items, setItems] = useState([])
-    // const user = JSON.parse(localStorage.getItem('user'))
 
     useEffect(() => {
-        // console.log(user.token)
         axios
             .get(url + 'listings')
             .then((res) => {

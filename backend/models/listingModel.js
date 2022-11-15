@@ -21,7 +21,7 @@ const listingSchema = new Schema({
     },
     extrainfo: {
         type: String,
-        required: true,
+        required: false,
     },
     portions: {
         type: Number,
