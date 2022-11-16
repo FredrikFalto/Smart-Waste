@@ -33,7 +33,7 @@ const Navbar = () => {
                     </a>
                 </li>
                 <li>
-                    <a href='/home' className='flex flex-col'>
+                    <a href='/profile' className='flex flex-col'>
                         <img src={ProfileIcon} alt='Profile' id='navIcon' />
                         Min Profil
                     </a>

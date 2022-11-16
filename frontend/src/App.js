@@ -8,6 +8,7 @@ import Listings from './pages/listings/listings'
 import ListingDetail from './pages/listings/listingDetail'
 import NewListing from './pages/listings/newListing'
 import SuccessfulListing from './pages/listings/successfulListing'
+import MyProfile from './pages/profile/myProfile'
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                         path='/listings/:listingId'
                         element={<ListingDetail />}
                     />
+                    <Route path='/profile' element={<MyProfile />} />
                 </Routes>
             </BrowserRouter>
         </div>
