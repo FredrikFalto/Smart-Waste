@@ -16,7 +16,9 @@ const MyProfile = () => {
         logout()
     }
 
-    const loggedInUser = JSON.parse(localStorage.getItem('user'))
+    const clickLogIn = () => {
+        window.location.replace(`/`)
+    }
 
     useEffect(() => {}, [])
 
@@ -25,16 +27,21 @@ const MyProfile = () => {
             <Navbar />
             <div className='grid grid-cols-1 place-items-center container mx-auto px-4 pb-20'>
                 {user && (
-                    <div className='grid grid-cols-1'>
-                        <span>{user.email}</span>
+                    <div className='grid grid-cols-1 w-full mt-80'>
+                        <span className='text-xl text-center'>
+                            Inloggad som:
+                        </span>
+                        <span className='text-xl text-center'>
+                            {user.email}
+                        </span>
                         <button
-                            className='bg-slate-400 rounded-md text-white mt-1'
+                            className='bg-green-600 rounded-md text-white mt-20 w-full'
                             id='profile-button'
                         >
-                            Mina annonser
+                            <a href=''>Mina annonser</a>
                         </button>
                         <button
-                            className='bg-slate-400 rounded-md text-white mt-1'
+                            className='bg-red-500 rounded-md text-white mt-1 w-full'
                             id='profile-button'
                             onClick={handleClick}
                         >
@@ -44,12 +51,15 @@ const MyProfile = () => {
                 )}
 
                 {!user && (
-                    <div>
+                    <div className='mt-80'>
                         <h1 className='text-xl w-full'>
                             Du måste logga in för att se din profil
                         </h1>
-                        <button className='bg-slate-400 rounded-md text-white mt-1 w-full h-10'>
-                            <a href='/'>Logga in</a>
+                        <button
+                            className='bg-green-600 rounded-md text-white w-full mt-20 h-10'
+                            onClick={clickLogIn}
+                        >
+                            Logga in
                         </button>
                     </div>
                 )}

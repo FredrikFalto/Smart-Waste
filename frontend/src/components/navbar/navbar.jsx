@@ -10,12 +10,12 @@ import PlusIcon from '../../img/PlusIcon.svg'
 import ProfileIcon from '../../img/ProfileIcon.svg'
 
 const Navbar = () => {
-    const { logout } = useLogout()
-    const { user } = useAuthContext()
+    // const { logout } = useLogout()
+    // const { user } = useAuthContext()
 
-    const handleClick = () => {
-        logout()
-    }
+    // const handleClick = () => {
+    //     logout()
+    // }
 
     return (
         <nav className='bg-white border border-gray-300 w-screen fixed bottom-0'>
@@ -38,7 +38,7 @@ const Navbar = () => {
                         Min Profil
                     </a>
                 </li>
-                <li>
+                {/* <li>
                     {user && (
                         <div>
                             <span>{user.email}</span>
@@ -62,7 +62,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     )}
-                </li>
+                </li> */}
             </ul>
         </nav>
     )
