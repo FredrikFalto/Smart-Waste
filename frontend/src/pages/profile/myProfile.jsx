@@ -20,6 +20,10 @@ const MyProfile = () => {
         window.location.replace(`/`)
     }
 
+    const clickMyListings = () => {
+        window.location.replace(`/`)
+    }
+
     useEffect(() => {}, [])
 
     return (
@@ -37,8 +41,9 @@ const MyProfile = () => {
                         <button
                             className='bg-green-600 rounded-md text-white mt-20 w-full'
                             id='profile-button'
+                            onClick={clickMyListings}
                         >
-                            <a href=''>Mina annonser</a>
+                            Mina annonser
                         </button>
                         <button
                             className='bg-red-500 rounded-md text-white mt-1 w-full'
