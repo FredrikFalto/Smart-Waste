@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { format } from 'date-fns'
 
@@ -16,7 +16,18 @@ const ListingForm = () => {
     const [imglink, setImglink] = useState('')
     const [price, setPrice] = useState('')
     const [expirationdate, setExpirationdate] = useState('')
+    const [userid, setUserid] = useState('')
     const [error, setError] = useState(null)
+
+    useEffect(() => {
+        const loggedUser = JSON.parse(localStorage.getItem('user'))
+
+        if (loggedUser !== null) {
+            setUserid(loggedUser.email)
+        } else if (loggedUser === null) {
+            setError()
+        }
+    }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -32,6 +43,7 @@ const ListingForm = () => {
             imglink,
             price,
             expirationdate,
+            userid,
         }
 
         const response = await fetch(url + '/api/listings', {
@@ -44,7 +56,16 @@ const ListingForm = () => {
         const json = await response.json()
 
         if (!response.ok) {
-            setError(json.error)
+            if (!userid) {
+                setError(
+                    'Du måste vara inloggad för att lägga till annons. ' +
+                        json.error
+                )
+            }
+
+            if (userid) {
+                setError(json.error)
+            }
         }
 
         if (response.ok) {
@@ -58,6 +79,7 @@ const ListingForm = () => {
             setImglink('')
             setPrice('')
             setExpirationdate('')
+            setUserid('')
 
             setError(null)
 

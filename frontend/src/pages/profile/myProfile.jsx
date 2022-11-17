@@ -24,7 +24,7 @@ const MyProfile = () => {
         window.location.replace(`/profile/mylistings`)
     }
 
-    useEffect(() => {}, [])
+    // useEffect(() => {}, [])
 
     return (
         <div>

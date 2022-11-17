@@ -38,6 +38,7 @@ const createListing = async (req, res) => {
         imglink,
         price,
         expirationdate,
+        userid,
     } = req.body
 
     try {
@@ -52,6 +53,7 @@ const createListing = async (req, res) => {
             imglink,
             price,
             expirationdate,
+            userid,
         })
         res.status(200).json(listing)
     } catch (error) {

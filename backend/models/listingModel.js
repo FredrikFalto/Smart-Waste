@@ -43,6 +43,10 @@ const listingSchema = new Schema({
         type: String,
         required: true,
     },
+    userid: {
+        type: String,
+        required: true,
+    },
 })
 
 module.exports = mongoose.model('Listing', listingSchema)
