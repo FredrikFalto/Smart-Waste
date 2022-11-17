@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useLogin } from '../../hooks/useLogin'
 
 import Logo from '../../img/Logo.svg'
@@ -12,6 +12,13 @@ const LogIn = () => {
         e.preventDefault()
 
         await login(email, password)
+    }
+
+    const loggedIn = JSON.parse(localStorage.getItem('user'))
+
+    // Check if someone is already logged in
+    if (loggedIn !== null) {
+        window.location.replace('/listings')
     }
 
     return (
@@ -85,6 +92,11 @@ const LogIn = () => {
                             {error}
                         </div>
                     )}
+                    <div className='text-center'>
+                        <a href='/listings' className='text-lg text-indigo-600'>
+                            Se annonser utan att logga in
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>
