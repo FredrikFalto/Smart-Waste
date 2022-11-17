@@ -9,6 +9,7 @@ import ListingDetail from './pages/listings/listingDetail'
 import NewListing from './pages/listings/newListing'
 import SuccessfulListing from './pages/listings/successfulListing'
 import MyProfile from './pages/profile/myProfile'
+import MyListings from './pages/listings/myListings'
 
 function App() {
     return (
@@ -26,6 +27,10 @@ function App() {
                         element={<ListingDetail />}
                     />
                     <Route path='/profile' element={<MyProfile />} />
+                    <Route
+                        path='/profile/mylistings'
+                        element={<MyListings />}
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

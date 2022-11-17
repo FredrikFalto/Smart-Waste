@@ -21,7 +21,7 @@ const MyProfile = () => {
     }
 
     const clickMyListings = () => {
-        window.location.replace(`/`)
+        window.location.replace(`/profile/mylistings`)
     }
 
     useEffect(() => {}, [])
@@ -46,7 +46,7 @@ const MyProfile = () => {
                             Mina annonser
                         </button>
                         <button
-                            className='bg-red-500 rounded-md text-white mt-1 w-full'
+                            className='border-red-600 text-red-600 rounded-md mt-1 w-full hover:bg-red-600 hover:text-white'
                             id='profile-button'
                             onClick={handleClick}
                         >
