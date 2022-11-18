@@ -44,12 +44,12 @@ const Listing = () => {
                                 <hr className='my-1 h-px bg-gray-300 border-0 shadow' />
 
                                 <p className='font-medium'>Allergener:</p>
-                                <p> {listing.allergens.join(', ')}</p>
+                                <p> {listing.allergens}</p>
 
                                 <hr className='my-1 h-px bg-gray-300 border-0 shadow' />
 
                                 <p className='font-medium'>Ingredienser:</p>
-                                <p> {listing.ingredients.join(', ')}</p>
+                                <p> {listing.ingredients}</p>
 
                                 <hr className='my-1 h-px bg-gray-300 border-0 shadow' />
 

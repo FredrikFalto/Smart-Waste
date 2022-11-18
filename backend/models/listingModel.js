@@ -8,11 +8,11 @@ const listingSchema = new Schema({
         required: true,
     },
     ingredients: {
-        type: Array,
+        type: String,
         required: true,
     },
     allergens: {
-        type: Array,
+        type: String,
         required: false,
     },
     category: {

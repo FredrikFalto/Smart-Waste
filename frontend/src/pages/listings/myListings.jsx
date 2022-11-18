@@ -11,6 +11,23 @@ const MyListings = () => {
 
     const loggedUser = JSON.parse(localStorage.getItem('user'))
 
+    const deleteListing = async (listingId) => {
+        if (window.confirm('Är du säker på att du vill ta bort annonsen?')) {
+            try {
+                const res = await axios.delete(url + '/listings/' + listingId)
+            } catch (error) {
+                console.log(error)
+            }
+
+            // Reload window after delete
+            window.location.reload(false)
+        }
+    }
+
+    const showListing = (listingId) => {
+        window.location.replace('/listings/' + listingId)
+    }
+
     useEffect(() => {
         axios
             .get(url + '/listings')
@@ -21,37 +38,43 @@ const MyListings = () => {
 
                         return (
                             <div key={item._id} className='card p-1 mt-2'>
-                                <a
-                                    href={`http://localhost:3000/listings/${item._id}`}
-                                >
-                                    <div className='flex'>
-                                        <img
-                                            src={item.imglink}
-                                            alt={item.dish}
-                                            className='rounded w-1/2'
-                                        />
-                                        {/* <hr className='my-1 h-px bg-gray-200 border-0 shadow' /> */}
-                                        <div className='grid grid-cols-1 w-1/2 ml-2'>
-                                            <h3 className=''>{item.dish}</h3>
+                                <div className='flex'>
+                                    <img
+                                        src={item.imglink}
+                                        alt={item.dish}
+                                        className='rounded w-1/2'
+                                    />
+                                    {/* <hr className='my-1 h-px bg-gray-200 border-0 shadow' /> */}
+                                    <div className='grid grid-cols-1 w-1/2 ml-2'>
+                                        <h3 className=''>{item.dish}</h3>
 
-                                            <p className='text-sm'>
-                                                {item.portions} portioner
-                                            </p>
-                                            <p className='text-sm'>
-                                                {item.price}kr
-                                            </p>
+                                        <p className='text-sm'>
+                                            {item.portions} portioner
+                                        </p>
+                                        <p className='text-sm'>
+                                            {item.price}kr
+                                        </p>
 
-                                            <div className='flex'>
-                                                <button className='bg-green-600 text-white rounded-md w-full mr-2'>
-                                                    Ändra
-                                                </button>
-                                                <button className='bg-red-600 text-white rounded-md w-full'>
-                                                    Ta bort
-                                                </button>
-                                            </div>
+                                        <div className='flex'>
+                                            <button
+                                                onClick={() =>
+                                                    showListing(item._id)
+                                                }
+                                                className='bg-green-600 text-white rounded-md w-full mr-2'
+                                            >
+                                                Visa
+                                            </button>
+                                            <button
+                                                className='bg-red-600 text-white rounded-md w-full'
+                                                onClick={() =>
+                                                    deleteListing(item._id)
+                                                }
+                                            >
+                                                Ta bort
+                                            </button>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         )
                     }

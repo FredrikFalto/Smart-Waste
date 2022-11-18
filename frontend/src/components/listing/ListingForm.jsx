@@ -99,7 +99,7 @@ const ListingForm = () => {
                 value={dish}
                 className='border border-slate-400 rounded w-full p-2 px-1'
             />
-            <label htmlFor='ingredients'>Ingredienser (en per rad)</label>
+            <label htmlFor='ingredients'>Ingredienser</label>
             <textarea
                 id='ingredients'
                 onChange={(e) => setIngredients(e.target.value)}
