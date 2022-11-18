@@ -9,14 +9,11 @@ const url = 'http://localhost:4000/api/'
 
 const Listings = () => {
     const [items, setItems] = useState([])
-    const [propsListings, setPropsListings] = useState(null)
 
     useEffect(() => {
         axios
             .get(url + 'listings')
             .then((res) => {
-                setPropsListings(res.data)
-
                 const listings = res.data.map((item) => {
                     return (
                         <div key={item._id} className='card p-1 basis-1/2'>
@@ -51,7 +48,7 @@ const Listings = () => {
 
     return (
         <div>
-            <Searchbar listings={propsListings} />
+            <Searchbar />
             <hr className='my-1 h-px bg-gray-200 border-0 shadow' />
 
             <Navbar />
