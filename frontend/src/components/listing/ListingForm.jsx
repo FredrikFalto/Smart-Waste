@@ -7,8 +7,8 @@ const ListingForm = () => {
     const url = 'http://localhost:4000'
 
     const [dish, setDish] = useState('')
-    const [ingredients, setIngredients] = useState([])
-    const [allergens, setAllergens] = useState([])
+    const [ingredients, setIngredients] = useState('')
+    const [allergens, setAllergens] = useState('')
     const [category, setCategory] = useState('')
     const [portions, setPortions] = useState('')
     const [extrainfo, setExtrainfo] = useState('')
