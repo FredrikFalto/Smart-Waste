@@ -35,10 +35,6 @@ const listingSchema = new Schema({
         type: Date,
         required: true,
     },
-    link: {
-        type: String,
-        required: true,
-    },
     imglink: {
         type: String,
         required: true,

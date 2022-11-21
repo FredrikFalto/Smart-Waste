@@ -73,7 +73,7 @@ const Listing = () => {
     return (
         <div>
             <Navbar />
-            <div className='container mx-auto'>
+            <div className='container mx-auto mb-20'>
                 {item}
                 <div className='px-2'>
                     <button className='w-full justify-center rounded-md border border-transparent bg-green-600 py-2 mt-5 text-sm font-medium text-white'>

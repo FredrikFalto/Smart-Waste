@@ -12,7 +12,6 @@ const ListingForm = () => {
     const [category, setCategory] = useState('')
     const [portions, setPortions] = useState('')
     const [extrainfo, setExtrainfo] = useState('')
-    const [link, setLink] = useState('')
     const [imglink, setImglink] = useState('')
     const [price, setPrice] = useState('')
     const [expirationdate, setExpirationdate] = useState('')
@@ -39,7 +38,6 @@ const ListingForm = () => {
             category,
             portions,
             extrainfo,
-            link,
             imglink,
             price,
             expirationdate,
@@ -75,7 +73,6 @@ const ListingForm = () => {
             setCategory('')
             setPortions('')
             setExtrainfo('')
-            setLink('')
             setImglink('')
             setPrice('')
             setExpirationdate('')
@@ -153,14 +150,6 @@ const ListingForm = () => {
                 cols='30'
                 rows='6'
             ></textarea>
-            <label htmlFor='link'>HelloFresh länk</label>
-            <input
-                type='text'
-                id='link'
-                onChange={(e) => setLink(e.target.value)}
-                value={link}
-                className='border border-slate-400 rounded w-full p-2 px-1'
-            />
             <label htmlFor='imglink'>Bildlänk</label>
             <input
                 type='text'

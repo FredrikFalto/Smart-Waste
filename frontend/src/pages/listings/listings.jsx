@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import "./listings.css"
+
 import Navbar from '../../components/navbar/navbar'
 import Searchbar from '../../components/searchbar/searchbar'
 
@@ -14,7 +16,24 @@ const url = 'http://localhost:4000/api/'
 const Listings = () => {
     const [items, setItems] = useState([])
 
+    const removeSelectedClass = () => {
+        document.getElementById('Kött').classList.remove('selected')
+        document.getElementById('Vegetariskt').classList.remove('selected')
+        document.getElementById('Fisk').classList.remove('selected')
+        document.getElementById('Kyckling').classList.remove('selected')
+    }
+
+    const clearFilter = () => {
+        removeSelectedClass()
+
+        getItems()
+    }
+
     const filterItems = (category) => {
+        removeSelectedClass()
+
+        document.getElementById(category).classList.add("selected")
+
         axios
             .get(url + 'listings')
             .then((res) => {
@@ -99,20 +118,19 @@ const Listings = () => {
 
             <Navbar />
 
-            {/* Category bar */}
             <div className='container mx-auto'>
                 <div className='grid grid-cols-2'>
                     <h3 className='ml-2 text-lg'>Vad är du sugen på?</h3>
                     <button
                         className='text-lg text-right mr-2'
-                        onClick={getItems}
+                        onClick={clearFilter}
                     >
                         Rensa filter
                     </button>
                 </div>
                 <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-1'>
                     <div>
-                        <button>
+                        <button id="Kött" className='rounded-xl'>
                             <img
                                 src={Meat}
                                 alt='Kött'
@@ -124,7 +142,7 @@ const Listings = () => {
                         </button>
                     </div>
                     <div>
-                        <button>
+                        <button id='Vegetariskt' className='rounded-xl'>
                             <img
                                 src={Vegetarian}
                                 alt='Vegetariskt'
@@ -136,7 +154,7 @@ const Listings = () => {
                         </button>
                     </div>
                     <div>
-                        <button>
+                        <button id='Fisk' className='rounded-xl'>
                             <img
                                 src={Fish}
                                 alt='Fisk'
@@ -148,7 +166,7 @@ const Listings = () => {
                         </button>
                     </div>
                     <div>
-                        <button>
+                        <button id='Kyckling' className='rounded-xl'>
                             <img
                                 src={Chicken}
                                 alt='Kyckling'
