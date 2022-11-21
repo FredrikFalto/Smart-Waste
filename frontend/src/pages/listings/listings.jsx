@@ -128,7 +128,7 @@ const Listings = () => {
                         Rensa filter
                     </button>
                 </div>
-                <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-1'>
+                <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2'>
                     <div>
                         <button id="Kött" className='rounded-xl'>
                             <img
