@@ -40,6 +40,10 @@ const Listing = () => {
                                 <h3 className='text-2xl font-bold'>
                                     {listing.price}kr
                                 </h3>
+                                <hr className='my-1 h-px bg-gray-300 border-0 shadow' />
+
+                                <p className='font-medium'>Kategori:</p>
+                                <p> {listing.category}</p>
 
                                 <hr className='my-1 h-px bg-gray-300 border-0 shadow' />
 
