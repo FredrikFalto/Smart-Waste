@@ -14,7 +14,7 @@ const MyListings = () => {
     const deleteListing = async (listingId) => {
         if (window.confirm('Är du säker på att du vill ta bort annonsen?')) {
             try {
-                const res = await axios.delete(url + '/listings/' + listingId)
+                await axios.delete(url + '/listings/' + listingId)
             } catch (error) {
                 console.log(error)
             }
@@ -44,7 +44,6 @@ const MyListings = () => {
                                         alt={item.dish}
                                         className='rounded w-1/2'
                                     />
-                                    {/* <hr className='my-1 h-px bg-gray-200 border-0 shadow' /> */}
                                     <div className='grid grid-cols-1 w-1/2 ml-2'>
                                         <h3 className=''>{item.dish}</h3>
 

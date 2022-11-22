@@ -87,14 +87,16 @@ const Listings = () => {
                                     className='rounded'
                                 />
                                 <hr className='my-1 h-px bg-gray-200 border-0 shadow' />
-                                <h3>{item.dish}</h3>
+                                <div>
+                                <h3 className='xl:text-lg'>{item.dish}</h3>
                                 <div className='grid grid-cols-2'>
-                                    <p className='text-sm'>
+                                    <p className='text-sm xl:text-lg'>
                                         {item.portions} portioner
                                     </p>
-                                    <p className='text-sm justify-self-end'>
+                                    <p className='text-sm justify-self-end xl:text-lg'>
                                         {item.price}kr
                                     </p>
+                                </div>
                                 </div>
                             </a>
                         </div>
@@ -119,69 +121,71 @@ const Listings = () => {
             <Navbar />
 
             <div className='container mx-auto'>
-                <div className='grid grid-cols-2'>
-                    <h3 className='ml-2 text-lg'>Vad är du sugen på?</h3>
-                    <button
-                        className='text-lg text-right mr-2'
-                        onClick={clearFilter}
-                    >
-                        Rensa filter
-                    </button>
-                </div>
-                <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2'>
-                    <div>
-                        <button id="Kött" className='rounded-xl'>
-                            <img
-                                src={Meat}
-                                alt='Kött'
-                                className='max-w-none'
-                                onClick={() => {
-                                    filterItems('Kött')
-                                }}
-                            />
+                <div className='border border-slate-900'>
+                    <div className='grid grid-cols-2'>
+                        <h3 className='ml-1 text-lg'>Vad är du sugen på?</h3>
+                        <button
+                            className='text-lg text-right mr-2'
+                            onClick={clearFilter}
+                        >
+                            Rensa filter
                         </button>
                     </div>
-                    <div>
-                        <button id='Vegetariskt' className='rounded-xl'>
-                            <img
-                                src={Vegetarian}
-                                alt='Vegetariskt'
-                                className='max-w-none'
-                                onClick={() => {
-                                    filterItems('Vegetariskt')
-                                }}
-                            />
-                        </button>
-                    </div>
-                    <div>
-                        <button id='Fisk' className='rounded-xl'>
-                            <img
-                                src={Fish}
-                                alt='Fisk'
-                                className='max-w-none'
-                                onClick={() => {
-                                    filterItems('Fisk')
-                                }}
-                            />
-                        </button>
-                    </div>
-                    <div>
-                        <button id='Kyckling' className='rounded-xl'>
-                            <img
-                                src={Chicken}
-                                alt='Kyckling'
-                                className='max-w-none'
-                                onClick={() => {
-                                    filterItems('Kyckling')
-                                }}
-                            />
-                        </button>
+                    <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2'>
+                        <div>
+                            <button id="Kött" className='rounded-xl'>
+                                <img
+                                    src={Meat}
+                                    alt='Kött'
+                                    className='max-w-none'
+                                    onClick={() => {
+                                        filterItems('Kött')
+                                    }}
+                                />
+                            </button>
+                        </div>
+                        <div>
+                            <button id='Vegetariskt' className='rounded-xl'>
+                                <img
+                                    src={Vegetarian}
+                                    alt='Vegetariskt'
+                                    className='max-w-none'
+                                    onClick={() => {
+                                        filterItems('Vegetariskt')
+                                    }}
+                                />
+                            </button>
+                        </div>
+                        <div>
+                            <button id='Fisk' className='rounded-xl'>
+                                <img
+                                    src={Fish}
+                                    alt='Fisk'
+                                    className='max-w-none'
+                                    onClick={() => {
+                                        filterItems('Fisk')
+                                    }}
+                                />
+                            </button>
+                        </div>
+                        <div>
+                            <button id='Kyckling' className='rounded-xl'>
+                                <img
+                                    src={Chicken}
+                                    alt='Kyckling'
+                                    className='max-w-none'
+                                    onClick={() => {
+                                        filterItems('Kyckling')
+                                    }}
+                                />
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 <h3 className='ml-2 text-xl'>Trött på det gamla vanliga?</h3>
 
-                <div className='grid grid-cols-2 gap-1 mx-1 overflow-auto pb-20'>
+                <div className='grid grid-cols-2 gap-1 mx-1 overflow-auto pb-20 xl:grid-cols-3'>
                     {items}
                 </div>
             </div>
