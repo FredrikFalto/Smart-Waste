@@ -121,8 +121,8 @@ const Listings = () => {
             <Navbar />
 
             <div className='container mx-auto lg:grid lg:grid-cols-5'>
-                <div className=''>
-                    <div className='grid grid-cols-2 lg:grid-cols-1 lg:text-center lg:justify-items-center'>
+                <div>
+                    <div className='grid grid-cols-2 lg:grid-cols-1 lg:text-center lg:justify-items-start'>
                         <h3 className='ml-1 text-lg lg:ml-0 lg:text-xl xl:pb-0.5'>
                             Vad är du sugen på?
                         </h3>
@@ -134,7 +134,7 @@ const Listings = () => {
                                 Rensa filter
                             </button>
                     </div>
-                    <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2 lg:grid lg:grid-cols-1 lg:text-center'>
+                    <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2 lg:grid lg:grid-cols-1 lg:ml-6'>
                         <div>
                             <button id="Kött" className='rounded-xl'>
                                 <img
@@ -183,7 +183,7 @@ const Listings = () => {
                                 />
                             </button>
                         </div>
-                        <div>
+                        <div className=''>
                             <button
                                 className='w-3/5 xl:w-2/5 rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white invisible lg:visible'
                                 onClick={clearFilter}
