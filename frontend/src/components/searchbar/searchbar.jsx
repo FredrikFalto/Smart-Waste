@@ -31,7 +31,7 @@ const Searchbar = () => {
 
     return (
         <div className='grid grid-cols-1 place-items-center pt-1'>
-            <div className='relative w-96 sm:w-8/12 md:w-7/12 lg:w-6/12'>
+            <div className='relative w-96 sm:w-8/12 md:w-7/12 lg:w-6/12 xl:w-5/12'>
                 <div className='flex items-center absolute inset-y-0 left-0 pl-3 pointer-events-none'>
                     <svg
                         aria-hidden='true'
@@ -49,7 +49,7 @@ const Searchbar = () => {
                 </div>
 
                 <input
-                    className='border-2 border-gray-300 bg-white block h-10 pl-10 pr-3 w-full rounded-lg text-sm focus:outline-stone-600'
+                    className='border-2 border-gray-300 bg-white block h-10 pl-10 pr-3 w-full rounded-lg text-md focus:outline-stone-600'
                     type='text'
                     name='search'
                     placeholder='Sök...'
@@ -59,7 +59,7 @@ const Searchbar = () => {
                 />
             </div>
 
-            <div className='flex flex-col items-center mt-1 bg-white text-center w-96 sm:w-8/12 md:w-7/12 lg:w-6/12'>
+            <div className='flex flex-col items-center mt-1 bg-white text-center w-96 sm:w-8/12 md:w-7/12 lg:w-6/12 z-10'>
                 {searchOutput.map((item) => {
                     return (
                         <div className='m-1 w-1/2 hover:shadow hover:shadow-slate-400' key={item._id}>
