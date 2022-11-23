@@ -120,18 +120,21 @@ const Listings = () => {
 
             <Navbar />
 
-            <div className='container mx-auto'>
-                <div className='border border-slate-900'>
-                    <div className='grid grid-cols-2'>
-                        <h3 className='ml-1 text-lg'>Vad är du sugen på?</h3>
-                        <button
-                            className='text-lg text-right mr-2'
-                            onClick={clearFilter}
-                        >
-                            Rensa filter
-                        </button>
+            <div className='container mx-auto lg:grid lg:grid-cols-5'>
+                <div className=''>
+                    <div className='grid grid-cols-2 lg:grid-cols-1 lg:text-center lg:justify-items-center'>
+                        <h3 className='ml-1 text-lg lg:ml-0 lg:text-xl xl:pb-0.5'>
+                            Vad är du sugen på?
+                        </h3>
+                            <button
+                            className='text-right text-lg mr-1 lg:hidden'
+                                // className='text-lg text-right mr-2 lg:text-center'
+                                onClick={clearFilter}
+                            >
+                                Rensa filter
+                            </button>
                     </div>
-                    <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2'>
+                    <div className='flex flex-row overflow-x-auto mx-1 gap-1 pb-2 lg:grid lg:grid-cols-1 lg:text-center'>
                         <div>
                             <button id="Kött" className='rounded-xl'>
                                 <img
@@ -180,13 +183,23 @@ const Listings = () => {
                                 />
                             </button>
                         </div>
+                        <div>
+                            <button
+                                className='w-3/5 xl:w-2/5 rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white invisible lg:visible'
+                                onClick={clearFilter}
+                            >
+                                Rensa filter
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <h3 className='ml-2 text-xl'>Trött på det gamla vanliga?</h3>
+                <div className='lg:col-span-4'>
+                    <h3 className='ml-2 text-xl'>Trött på det gamla vanliga?</h3>
 
-                <div className='grid grid-cols-2 gap-1 mx-1 overflow-auto pb-20 xl:grid-cols-3'>
-                    {items}
+                    <div className='grid grid-cols-2 gap-1 mx-1 overflow-auto pb-20 lg:grid-cols-3'>
+                        {items}
+                    </div>
                 </div>
             </div>
         </div>
