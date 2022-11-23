@@ -22,7 +22,7 @@ const Listing = () => {
 
                 const listingDetail = () => {
                     return (
-                        <div className='grid'>
+                        <div className='grid md:w-1/2'>
                             <img
                                 src={listing.imglink}
                                 alt={listing.dish}
@@ -59,6 +59,10 @@ const Listing = () => {
 
                                 <p className='font-medium'>Extra info:</p>
                                 <p> {listing.extrainfo}</p>
+
+                                <button className='w-full justify-center rounded-md border border-transparent bg-green-600 py-2 mt-5 text-sm font-medium text-white'>
+                                    Kontakta säljare
+                                </button>
                             </div>
                         </div>
                     )
@@ -73,13 +77,8 @@ const Listing = () => {
     return (
         <div>
             <Navbar />
-            <div className='container mx-auto mb-20'>
+            <div className='container mx-auto mb-20 grid grid-cols-1 justify-items-center'>
                 {item}
-                <div className='px-2'>
-                    <button className='w-full justify-center rounded-md border border-transparent bg-green-600 py-2 mt-5 text-sm font-medium text-white'>
-                        Kontakta säljare
-                    </button>
-                </div>
             </div>
         </div>
     )

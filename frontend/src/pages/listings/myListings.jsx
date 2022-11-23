@@ -59,12 +59,12 @@ const MyListings = () => {
                                                 onClick={() =>
                                                     showListing(item._id)
                                                 }
-                                                className='bg-green-600 text-white rounded-md w-full mr-2'
+                                                className='bg-green-600 text-white rounded-md w-full mr-2 xl:h-10'
                                             >
                                                 Visa
                                             </button>
                                             <button
-                                                className='bg-red-600 text-white rounded-md w-full'
+                                                className='bg-red-600 text-white rounded-md w-full xl:h-10'
                                                 onClick={() =>
                                                     deleteListing(item._id)
                                                 }
@@ -95,7 +95,9 @@ const MyListings = () => {
                 </h1>
             </div>
 
-            {activeListings && <div className='grid grid-cols-1'>{items}</div>}
+            {activeListings && <div className='grid grid-cols-1 container mx-auto overflow-auto pb-20 md:w-1/2 xl:w-1/4'>
+                    {items}
+            </div>}
 
             {!activeListings && (
                 <div className='container mx-auto text-center mt-96'>
@@ -107,3 +109,48 @@ const MyListings = () => {
 }
 
 export default MyListings
+
+// return (
+//     <div key={item._id} className='card p-1 mt-2'>
+//         <div className='flex'>
+//             <img
+//                 src={item.imglink}
+//                 alt={item.dish}
+//                 className='rounded w-1/2'
+//             />
+//             <div className='grid grid-cols-1 w-1/2 ml-2'>
+//                 <h3 className=''>{item.dish}</h3>
+
+//                 <p className='text-sm'>
+//                     {item.portions} portioner
+//                 </p>
+//                 <p className='text-sm'>
+//                     {item.price}kr
+//                 </p>
+
+//                 <div className='flex'>
+//                     <button
+//                         onClick={() =>
+//                             showListing(item._id)
+//                         }
+//                         className='bg-green-600 text-white rounded-md w-full mr-2'
+//                     >
+//                         Visa
+//                     </button>
+//                     <button
+//                         className='bg-red-600 text-white rounded-md w-full'
+//                         onClick={() =>
+//                             deleteListing(item._id)
+//                         }
+//                     >
+//                         Ta bort
+//                     </button>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+// )
+
+// {activeListings && <div className='grid grid-cols-1 container mx-auto'>
+//                     {items}
+//             </div>}

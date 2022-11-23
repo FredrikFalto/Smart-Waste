@@ -183,7 +183,7 @@ const Listings = () => {
                                 />
                             </button>
                         </div>
-                        <div className=''>
+                        <div>
                             <button
                                 className='w-3/5 xl:w-2/5 rounded-md border border-transparent bg-green-600 py-2 px-4 text-sm font-medium text-white invisible lg:visible'
                                 onClick={clearFilter}
