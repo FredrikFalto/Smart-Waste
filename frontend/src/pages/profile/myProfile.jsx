@@ -17,11 +17,11 @@ const MyProfile = () => {
     }
 
     const clickLogIn = () => {
-        window.location.replace(`/`)
+        window.location = `/`
     }
 
     const clickMyListings = () => {
-        window.location.replace(`/profile/mylistings`)
+        window.location = `/profile/mylistings`
     }
 
     // useEffect(() => {}, [])

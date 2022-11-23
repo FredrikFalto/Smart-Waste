@@ -25,7 +25,7 @@ const MyListings = () => {
     }
 
     const showListing = (listingId) => {
-        window.location.replace('/listings/' + listingId)
+        window.location = `/listings/${listingId}`
     }
 
     useEffect(() => {

@@ -82,7 +82,7 @@ const ListingForm = () => {
 
             console.log('New listing added', json)
 
-            window.location.replace(`/success`)
+            window.location = '/success'
         }
     }
 

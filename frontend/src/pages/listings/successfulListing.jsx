@@ -6,11 +6,11 @@ import SuccessIcon from '../../img/SuccessIcon.svg'
 
 const successfulListing = () => {
     const newListing = () => {
-        window.location.replace(`/newlisting`)
+        window.location = `/newlisting`
     }
 
     const myListings = () => {
-        window.location.replace(`/profile/mylistings`)
+        window.location = `/profile/mylistings`
     }
 
     return (

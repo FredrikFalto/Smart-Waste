@@ -18,7 +18,7 @@ const LogIn = () => {
 
     // Check if someone is already logged in
     if (loggedIn !== null) {
-        window.location.replace('/listings')
+        window.location = '/listings'
     }
 
     return (

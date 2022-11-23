@@ -33,7 +33,7 @@ export const useLogin = () => {
 
             setIsLoading(false)
 
-            window.location.replace(`/listings`)
+            window.location = `/listings`
         }
     }
 
