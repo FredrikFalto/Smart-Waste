@@ -24,14 +24,12 @@ const MyProfile = () => {
         window.location = `/profile/mylistings`
     }
 
-    // useEffect(() => {}, [])
-
     return (
         <div>
             <Navbar />
-            <div className='grid grid-cols-1 place-items-center container mx-auto px-4 pb-20'>
+            <div className='grid grid-cols-1 container mx-auto px-4 pb-20'>
                 {user && (
-                    <div className='grid grid-cols-1 w-full mt-80'>
+                    <div className='grid grid-cols-1 w-full mt-80 place-items-center'>
                         <span className='text-xl text-center'>
                             Inloggad som:
                         </span>
@@ -39,14 +37,14 @@ const MyProfile = () => {
                             {user.email}
                         </span>
                         <button
-                            className='bg-green-600 rounded-md text-white mt-20 w-full'
+                            className='bg-green-600 rounded-md text-white mt-20 w-full md:w-4/5 lg:w-3/5 xl:w-2/6'
                             id='profile-button'
                             onClick={clickMyListings}
                         >
                             Mina annonser
                         </button>
                         <button
-                            className='border-red-600 text-red-600 rounded-md mt-1 w-full hover:bg-red-600 hover:text-white'
+                            className='border-red-600 text-red-600 rounded-md mt-1 w-full hover:bg-red-600 hover:text-white md:w-4/5 lg:w-3/5 xl:w-2/6'
                             id='profile-button'
                             onClick={handleClick}
                         >

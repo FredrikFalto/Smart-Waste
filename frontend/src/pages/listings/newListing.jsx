@@ -10,7 +10,7 @@ const newListing = () => {
         <div>
             <Navbar />
 
-            <div className='container mx-auto px-4 pb-20'>
+            <div className='container mx-auto px-4 pb-20 lg:px-32 xl:px-56'>
                 {loggedUser && <ListingForm />}
 
                 {!loggedUser && 
