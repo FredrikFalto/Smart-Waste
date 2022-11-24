@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useLogin } from '../../hooks/useLogin'
 
 import Logo from '../../img/Logo.svg'
