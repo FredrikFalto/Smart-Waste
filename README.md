@@ -1,7 +1,8 @@
 # Smart Waste
 This project was built during our final course at KYH called "front-end project". The course consisted of two parts. The first part was only UX,  we worked in groups to develop a UI in Figma. In the second part we worked individually to develop the app.
 
-## Installation, run the following commands:
+## Installation
+Run the following commands:
 
 Change directory into the "frontend" folder and run "npm install"
 
