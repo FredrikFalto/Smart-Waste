@@ -51,7 +51,7 @@ const Searchbar = () => {
                 <input
                     className='border-2 border-gray-300 bg-white block h-10 pl-10 pr-3 w-full rounded-lg text-md focus:outline-stone-600'
                     type='text'
-                    name='search'
+                    name='sök'
                     placeholder='Sök...'
                     onChange={(event) => {
                         setSearchTerm(event.target.value)
