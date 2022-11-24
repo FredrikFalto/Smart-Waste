@@ -54,11 +54,11 @@ const MyProfile = () => {
 
                 {!user && (
                     <div className='grid grid-cols-1 w-full mt-80 place-items-center'>
-                        <h1 className='text-xl w-full text-center'>
+                        <h1 className='text-xl w-full text-center mt-10'>
                             Du måste logga in för att se din profil
                         </h1>
                         <button
-                            className='bg-green-600 rounded-md text-white w-full mt-20 h-10 md:w-4/5 lg:w-3/5 xl:w-2/6'
+                            className='bg-green-600 rounded-md text-white w-full mt-10 h-10 md:w-4/5 lg:w-3/5 xl:w-2/6'
                             onClick={clickLogIn}
                         >
                             Logga in
