@@ -3,18 +3,13 @@ This project was built during our final course at KYH called "front-end project"
 
 ## Installation, run the following commands:
 
-Change directory into the "frontend" folder and run 
-### npm install
+Change directory into the "frontend" folder and run "npm install"
 
-Then change directory into the "backend" folder and again, run
-### npm install
+Then change directory into the "backend" folder and again, run "npm install"
 
 
 ## Packages used during development:
-Date-fns
-JWT
-Validator
-Axios
+Date-fns, JWT, Validator, Axios
 
 ## Available Scripts
 
